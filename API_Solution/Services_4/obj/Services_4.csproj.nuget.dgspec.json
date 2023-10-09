@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HOANG\\source\\repos\\API_project\\Services_4\\Services_4.csproj": {}
+    "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Services_4\\Services_4.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HOANG\\source\\repos\\API_project\\Repositories_4\\Repositories_4.csproj": {
+    "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Repositories_4\\Repositories_4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HOANG\\source\\repos\\API_project\\Repositories_4\\Repositories_4.csproj",
+        "projectUniqueName": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Repositories_4\\Repositories_4.csproj",
         "projectName": "Repositories_4",
-        "projectPath": "C:\\Users\\HOANG\\source\\repos\\API_project\\Repositories_4\\Repositories_4.csproj",
+        "projectPath": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Repositories_4\\Repositories_4.csproj",
         "packagesPath": "C:\\Users\\HOANG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HOANG\\source\\repos\\API_project\\Repositories_4\\obj\\",
+        "outputPath": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Repositories_4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -83,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\HOANG\\source\\repos\\API_project\\Services_4\\Services_4.csproj": {
+    "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Services_4\\Services_4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HOANG\\source\\repos\\API_project\\Services_4\\Services_4.csproj",
+        "projectUniqueName": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Services_4\\Services_4.csproj",
         "projectName": "Services_4",
-        "projectPath": "C:\\Users\\HOANG\\source\\repos\\API_project\\Services_4\\Services_4.csproj",
+        "projectPath": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Services_4\\Services_4.csproj",
         "packagesPath": "C:\\Users\\HOANG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HOANG\\source\\repos\\API_project\\Services_4\\obj\\",
+        "outputPath": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Services_4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -111,8 +111,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\HOANG\\source\\repos\\API_project\\Repositories_4\\Repositories_4.csproj": {
-                "projectPath": "C:\\Users\\HOANG\\source\\repos\\API_project\\Repositories_4\\Repositories_4.csproj"
+              "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Repositories_4\\Repositories_4.csproj": {
+                "projectPath": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Repositories_4\\Repositories_4.csproj"
               }
             }
           }

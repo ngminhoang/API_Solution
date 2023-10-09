@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9qYrjIbQOB9UaDIETwEmhVKUjnxXi6l0/dugjVXzpFmv/VW1F/vjK5PyAyNTsNST1IWqBMKgIhG6NxHCkCxv4Q==",
+  "dgSpecHash": "6n5X8VF/wWSpYdtOA1ceVOhRMAMuLuyzgUAudyIvhWySalClfLMUtIYWneiR6g8Tav6T8QeXuidzqroG15q19g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HOANG\\source\\repos\\API_project\\Services_4\\Services_4.csproj",
+  "projectFilePath": "C:\\Users\\HOANG\\Documents\\GitHub\\API_Solution\\API_Solution\\Services_4\\Services_4.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HOANG\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\HOANG\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
