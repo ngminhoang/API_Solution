@@ -8,13 +8,13 @@ namespace API_6._0_4.DBcontext
     {
         
         [Key, Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int wardID { get; set; }
+        public int WardID { get; set; }
         [StringLength(50)]
-        public string wardName { get; set; }
+        public string WardName { get; set; }
         [StringLength(50)]
-        public string? wardDescription { get; set; }
+        public string? WardDescription { get; set; }
         [ForeignKey("District")]
-        public int districtID { get; set; }
+        public int DistrictID { get; set; }
         public virtual District district  { get; set; }
     }
 }

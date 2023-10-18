@@ -26,3 +26,17 @@ C:\Users\HOANG\source\repos\API_project\Repositories_4\obj\Debug\net6.0\refint\R
 C:\Users\HOANG\source\repos\API_project\Repositories_4\obj\Debug\net6.0\Repositories_4.pdb
 C:\Users\HOANG\source\repos\API_project\Repositories_4\obj\Debug\net6.0\Repositories_4.genruntimeconfig.cache
 C:\Users\HOANG\source\repos\API_project\Repositories_4\obj\Debug\net6.0\ref\Repositories_4.dll
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\bin\Debug\net6.0\Repositories_4.deps.json
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\bin\Debug\net6.0\Repositories_4.runtimeconfig.json
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\bin\Debug\net6.0\Repositories_4.dll
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\bin\Debug\net6.0\Repositories_4.pdb
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.csproj.AssemblyReference.cache
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.AssemblyInfoInputs.cache
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.AssemblyInfo.cs
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.csproj.CoreCompileInputs.cache
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.dll
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\refint\Repositories_4.dll
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.pdb
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\Repositories_4.genruntimeconfig.cache
+C:\Users\HOANG\Documents\GitHub\API_Solution\API_Solution\Repositories_4\obj\Debug\net6.0\ref\Repositories_4.dll

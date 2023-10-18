@@ -30,7 +30,7 @@ namespace API_6._0_4.Repositories
         {
             try
             {
-                var rs = _dbcontext.Provinces.FirstOrDefault(t => t.provinceID == id);
+                var rs = _dbcontext.Provinces.FirstOrDefault(t => t.ProvinceID == id);
                 return rs;
             }
             catch (Exception ex) { throw ex; }
@@ -80,9 +80,9 @@ namespace API_6._0_4.Repositories
         {
             try
             {
-                var maxIDProvince = _dbcontext.Provinces.OrderByDescending(t => t.provinceID).FirstOrDefault();
+                var maxIDProvince = _dbcontext.Provinces.OrderByDescending(t => t.ProvinceID).FirstOrDefault();
                 if (maxIDProvince == null) return 0;
-                return maxIDProvince.provinceID;
+                return maxIDProvince.ProvinceID;
             }
             catch(Exception ex) { return 0; }
         }
@@ -91,7 +91,7 @@ namespace API_6._0_4.Repositories
         public List<District> getDistrictByProvinceID(int id)
         {
             var DistrictList = _dbcontext.Districts
-                .Where(h => h.provinceID == id)
+                .Where(h => h.ProvinceID == id)
                 .ToList();
 
             return DistrictList;

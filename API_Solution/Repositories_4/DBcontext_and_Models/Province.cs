@@ -11,10 +11,10 @@ namespace API_6._0_4.DBcontext
         public Province() { }
         [Key, Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        public int provinceID { get; set; }
+        public int ProvinceID { get; set; }
         [StringLength(50)]
-        public string provinceName { get; set; }
+        public string ProvinceName { get; set; }
         [StringLength(50)]
-        public string? provinceDescription { get; set; }
+        public string? ProvinceDescription { get; set; }
     }
 }

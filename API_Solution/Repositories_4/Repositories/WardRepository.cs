@@ -2,20 +2,20 @@
 
 namespace API_6._0_4.Repositories
 {
-    public class WardRepository: RepositoryInterface<Ward>
+    public class WardRepository : RepositoryInterface<Ward>
     {
         private EF_DBcontext _dbcontext;
         public WardRepository(EF_DBcontext dbcontext)
         {
             _dbcontext = dbcontext;
         }
-        
+
         //HAM LAY TOAN BO DOI TUONG
         public List<Object> getAll()
         {
             try
             {
-                List<Ward > rs = _dbcontext.Wards.ToList();
+                List<Ward> rs = _dbcontext.Wards.ToList();
                 List<Object> list = rs.ConvertAll(x => (object)x);
                 return list;
             }
@@ -23,11 +23,11 @@ namespace API_6._0_4.Repositories
         }
 
         //HAM READ
-        public Object  select(int id)
+        public Object select(int id)
         {
             try
             {
-                var rs = _dbcontext.Wards.FirstOrDefault(t => t.wardID == id);
+                var rs = _dbcontext.Wards.FirstOrDefault(t => t.WardID == id);
                 return rs;
             }
             catch (Exception ex) { throw ex; }
@@ -73,17 +73,19 @@ namespace API_6._0_4.Repositories
         //HAM LAY MAX ID
         public int maxID()
         {
-            try { 
-            var maxIDWard = _dbcontext.Wards.OrderByDescending(t => t.wardID).FirstOrDefault();
+            try {
+                var maxIDWard = _dbcontext.Wards.OrderByDescending(t => t.WardID).FirstOrDefault();
                 if (maxIDWard == null) return 0;
-                return maxIDWard.wardID; }
+                return maxIDWard.WardID; }
             catch (Exception ex) { return 0; }
         }
 
         //HAM LAY DANH SACH TINH (khong dung)
-        public List<Ward> getWardByDistrictID(int id)=> null;
+        public List<Ward> getWardByDistrictID(int id) => null;
 
         //HAM LAY DANH SACH HUYEN (khong dung)
-        public List<District> getDistrictByProvinceID(int id)=> null;
+        public List<District> getDistrictByProvinceID(int id) => null;
+
+        public int trye(){return 0;}
     }
 }

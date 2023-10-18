@@ -1,4 +1,5 @@
 ﻿using API_6._0_4.DBcontext;
+using Services_4.DTOModels;
 using Services_4.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace Services_4.Services
         int getMaxID(string t);
         List<Province> getAllProvinces();
         object select(string t, int id);
+        string create(UserModel userModel);
         string create(ProvinceModel provinceModel);
         string create(int idProvince, DistrictModel districtModel);
         string create(int idDtrict, WardModel wardModel);
@@ -22,6 +24,5 @@ namespace Services_4.Services
         string delete(string t, int id);
         dynamic getAllDistrictInfor(int districtID);
         dynamic getAllProvinceInfor(int provinceID);
-
     }
 }

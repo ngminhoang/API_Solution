@@ -11,11 +11,12 @@ namespace API_6._0_4.DBcontext
             // modelBuilder.Entity<Huyen>()
             //   .HasKey(h => new { h.Tid, h.Hid }); // Composite key configuration
             modelBuilder.Entity<Province>()
-           .Property(p => p.provinceID)
+           .Property(p => p.ProvinceID)
            .ValueGeneratedOnAdd();
         }
         public DbSet<Province> Provinces { get; set; }
         public DbSet<District> Districts { get; set; }
         public DbSet<Ward> Wards { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

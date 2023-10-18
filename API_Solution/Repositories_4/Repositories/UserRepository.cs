@@ -1,11 +1,17 @@
 ﻿using API_6._0_4.DBcontext;
+using API_6._0_4.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace API_6._0_4.Repositories
+namespace Repositories_4.Repositories
 {
-    public class DistrictRepository : RepositoryInterface<District>
+    public class UserRepository: RepositoryInterface<User>
     {
         private EF_DBcontext _dbcontext;
-        public DistrictRepository(EF_DBcontext dbcontext)
+        public UserRepository(EF_DBcontext dbcontext)
         {
             _dbcontext = dbcontext;
         }
@@ -15,7 +21,7 @@ namespace API_6._0_4.Repositories
         {
             try
             {
-                List<District> rs = _dbcontext.Districts.ToList();
+                List<User> rs = _dbcontext.Users.ToList();
                 List<Object> list = rs.ConvertAll(x => (object)x);
                 return list;
             }
@@ -27,46 +33,43 @@ namespace API_6._0_4.Repositories
         {
             try
             {
-                var rs = _dbcontext.Districts.FirstOrDefault(t => t.DistrictID == id);
+                var rs = _dbcontext.Users.FirstOrDefault(t => t.UserId == id);
                 return rs;
             }
             catch (Exception ex) { throw ex; }
         }
 
         //HAM CREATE
-        public void create(Object districtPar)
+        public void create(Object UserPar)
         {
             try
             {
-
-                District district = (District)districtPar;
-                _dbcontext.Districts.Add(district);
+                User User = (User)UserPar;
+                _dbcontext.Users.Add(User);
                 _dbcontext.SaveChanges();
 
             }
             catch (Exception ex) { throw ex; }
         }
-
         //HAM UPDATE
-        public void update(Object districtPar)
+        public void update(Object UserPar)
         {
             try
             {
-                District district = (District)districtPar;
-                _dbcontext.Districts.Update(district);
+                User User = (User)UserPar;
+                _dbcontext.Users.Update(User);
                 _dbcontext.SaveChanges();
 
             }
             catch (Exception ex) { throw ex; }
         }
-
         //HAM DELETE
-        public void delete(Object districtPar)
+        public void delete(Object UserPar)
         {
             try
             {
-                District district = (District)districtPar;
-                _dbcontext.Districts.Remove(district);
+                User User = (User)UserPar;
+                _dbcontext.Users.Remove(User);
                 _dbcontext.SaveChanges();
 
             }
@@ -78,26 +81,17 @@ namespace API_6._0_4.Repositories
         {
             try
             {
-                var maxIDDistrict = _dbcontext.Districts.OrderByDescending(t => t.DistrictID).FirstOrDefault();
-                if (maxIDDistrict == null) return 0;
-                return maxIDDistrict.DistrictID;
+                var maxIDUser = _dbcontext.Users.OrderByDescending(t => t.UserId).FirstOrDefault();
+                if (maxIDUser == null) return 0;
+                return maxIDUser.UserId;
             }
             catch (Exception ex) { return 0; }
         }
 
-        //HAM LAY DANH SACH Ward 
-        public List<Ward> getWardByDistrictID(int districtID)
-        {
-            var WardList = _dbcontext.Wards
-                .Where(h => h.DistrictID == districtID)
-                .ToList();
-
-            return WardList;
-        }
+        //HAM LAY DANH SACH TINH (khong dung)
+        public List<Ward> getWardByDistrictID(int id) => null;
 
         //HAM LAY DANH SACH HUYEN (khong dung)
         public List<District> getDistrictByProvinceID(int id) => null;
-
-        
     }
 }

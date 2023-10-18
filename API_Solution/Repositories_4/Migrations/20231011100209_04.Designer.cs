@@ -2,6 +2,7 @@
 using API_6._0_4.DBcontext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -10,9 +11,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Repositories_4.Migrations
 {
     [DbContext(typeof(EF_DBcontext))]
-    partial class EF_DBcontextModelSnapshot : ModelSnapshot
+    [Migration("20231011100209_04")]
+    partial class _04
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,104 +25,76 @@ namespace Repositories_4.Migrations
 
             modelBuilder.Entity("API_6._0_4.DBcontext.District", b =>
                 {
-                    b.Property<int>("DistrictID")
+                    b.Property<int>("districtID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("DistrictID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("districtID"));
 
-                    b.Property<string>("DistrictDescripton")
+                    b.Property<string>("districtDescripton")
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<string>("DistrictName")
+                    b.Property<string>("districtName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<int>("DrovinceID")
+                    b.Property<int>("provinceID")
                         .HasColumnType("integer");
 
-                    b.Property<int>("ProvinceID")
-                        .HasColumnType("integer");
+                    b.HasKey("districtID");
 
-                    b.HasKey("DistrictID");
-
-                    b.HasIndex("ProvinceID");
+                    b.HasIndex("provinceID");
 
                     b.ToTable("District");
                 });
 
             modelBuilder.Entity("API_6._0_4.DBcontext.Province", b =>
                 {
-                    b.Property<int>("ProvinceID")
+                    b.Property<int>("provinceID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ProvinceID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("provinceID"));
 
-                    b.Property<string>("ProvinceDescription")
+                    b.Property<string>("provinceDescription")
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<string>("ProvinceName")
+                    b.Property<string>("provinceName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.HasKey("ProvinceID");
+                    b.HasKey("provinceID");
 
                     b.ToTable("Province");
                 });
 
-            modelBuilder.Entity("API_6._0_4.DBcontext.User", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("UserId"));
-
-                    b.Property<string>("Account")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("User");
-                });
-
             modelBuilder.Entity("API_6._0_4.DBcontext.Ward", b =>
                 {
-                    b.Property<int>("WardID")
+                    b.Property<int>("wardID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("WardID"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("wardID"));
 
-                    b.Property<int>("DistrictID")
+                    b.Property<int>("districtID")
                         .HasColumnType("integer");
 
-                    b.Property<string>("WardDescription")
+                    b.Property<string>("wardDescription")
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.Property<string>("WardName")
+                    b.Property<string>("wardName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)");
 
-                    b.HasKey("WardID");
+                    b.HasKey("wardID");
 
-                    b.HasIndex("DistrictID");
+                    b.HasIndex("districtID");
 
                     b.ToTable("Ward");
                 });
@@ -129,7 +103,7 @@ namespace Repositories_4.Migrations
                 {
                     b.HasOne("API_6._0_4.DBcontext.Province", "province")
                         .WithMany()
-                        .HasForeignKey("ProvinceID")
+                        .HasForeignKey("provinceID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -140,7 +114,7 @@ namespace Repositories_4.Migrations
                 {
                     b.HasOne("API_6._0_4.DBcontext.District", "district")
                         .WithMany()
-                        .HasForeignKey("DistrictID")
+                        .HasForeignKey("districtID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

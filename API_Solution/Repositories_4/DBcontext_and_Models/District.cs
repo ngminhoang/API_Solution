@@ -8,13 +8,14 @@ namespace API_6._0_4.DBcontext
     {
         public District() { }
         [Key, Required, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int districtID { get; set; }
+        public int DistrictID { get; set; }
         [StringLength(50)]
-        public string districtName { get; set; }
+        public string DistrictName { get; set; }
         [StringLength(50)]
-        public string? districtDescripton { get; set;}
+        public string? DistrictDescripton { get; set;}
         [ForeignKey("Province")]
-        public int provinceID { get; set; }
+        public int DrovinceID { get; set; }
         public virtual Province province { get; set; }
+        public int ProvinceID { get; internal set; }
     }
 }
